@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Valentines Day Card Fjor.</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># I am a programmer,</span><br/>
+			<span class="comments"># so I write code to celebrate Valentine's Day in coder's way.</span><br/>
+			<span class="comments">##</span><br/>
+			i = Boy(<span class="string">"Fjor."</span>);<br/>
+			u = Girl(<span class="string">"Kwisabelll"</span>);<br/>
+			<span class="comments"># Dec 4 2023, I met you because of Internet. </span><br/>
+			i.meet(u)<br/>
+			<span class="comments"># Afterwards, We became close. </span><br/>
+			i.close(u)<br/>
+			<span class="comments"># Dec 8, 2023, 12:04 AM. I courted you.</span><br/>
+			i.court(u)<br/>
+			<span class="comments"># Since then, I'm always obsessed with you.</span><br/>
+			i.obsession(u)<br/>
+			<span class="comments"># We enjoy facetalking together.</span><br/>
+			video_calls(i, u)<br/>
+			<span class="comments"># We enjoy sharing stories.</span><br/>
+			exchange_stories(u, i)<br/>
+			<span class="comments"># We enjoy having fun together.</span><br/>
+			fun(u, i)<br/>
+			<span class="comments"># We enjoy late night talks.</span><br/>
+			night_talks(u, i)<br/>
+			<span class="comments"># Sometimes we talk about each others problems.</span><br/>
+			problems(u, i, sometimes=<span class="keyword">True</span>)<br/>
+			<span class="comments"># But we are getting more and more in harmony together.</span><br/>
+			u.in_harmony_with(i) <br/>
+			i.in_harmony_with(u) <br/>
+			<span class="comments"># You are everything to me.</span><br/>
+			while <span class="keyword">True</span>:<br/>
+			<span class="placeholder"></span><span class="keyword">if</span> u.with(i):<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>u = everything<br/>
+			<span class="placeholder"></span><span class="keyword">else</span>:<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>everything = u<br/>
+			<span class="comments"># Wait a few more years, and I will marry you.</span><br/>
+			i.marry(u, in_the_future=<span class="keyword">True</span>)<br/>
+			i.live_happily_forever_with(u)<br/>
+			<span class="comments"># I love you forever.</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Kwisabelll, I have fallen in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I Love u forever and ever.<br/>
+					<div class="signature">- Kwisabelll | Fjor.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		Jimar / Fjor.
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	
+	together.setFullYear(2023, 11, 8);
+	together.setHours(13);
+	together.setMinutes(23);
+	together.setSeconds(47);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
